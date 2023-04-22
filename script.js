@@ -15,7 +15,7 @@ function get_time_until() {
     return [days, hours, minutes, Math.round(seconds)]
 }
 function update_timer(diff) {
-    timer_element.innerHTML = diff.join(':')
+    timer_element.innerHTML = "<b>" + diff.join(':') + "</b>"
     setTimeout(update_timer, 1000)
 
 }
