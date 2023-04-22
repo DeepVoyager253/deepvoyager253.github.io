@@ -19,3 +19,4 @@ function update_timer(diff) {
     setTimeout(update_timer, 1000)
 
 }
+update_timer(get_time_until())
