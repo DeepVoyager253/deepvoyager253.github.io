@@ -19,4 +19,5 @@ function update_timer(diff) {
     setTimeout(update_timer, 1000)
 
 }
+console.log(get_time_until().join(':'))
 update_timer(get_time_until())
