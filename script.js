@@ -12,12 +12,13 @@ function get_time_until() {
     delta -= minutes * 60;
     var seconds = delta % 60;
 
-    return [days, hours, minutes, seconds]
+    return [days, hours, minutes, Math.round(seconds)]
 }
 function update_timer(diff) {
     timer_element.innerHTML = diff.join(':')
     setTimeout(update_timer, 1000)
 
 }
-console.log(get_time_until().join(':'))
-update_timer(get_time_until())
+var intervalId = window.setInterval(function(){
+  update_timer(get_time_until())
+}, 1000);
